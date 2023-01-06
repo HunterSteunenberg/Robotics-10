@@ -1,0 +1,28 @@
+// C++ code
+
+int sense = 7;
+
+void setup()
+{
+  pinMode(sense, INPUT);
+  pinMode(8, OUTPUT);
+  digitalWrite(4, HIGH);
+  int command&data = 0;
+  
+  
+  Serial.begin(9600);
+  
+}
+
+void loop()
+{
+ // Serial.println(digitalRead(sense));
+  if (digitalRead(sense) == HIGH) {
+    digitalWrite(8, HIGH);
+    
+  }
+ else {
+    digitalWrite(8, LOW);
+  }
+  delay(100); // Delay a little bit to improve simulation performance
+}
